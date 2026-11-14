@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="بوابة العضويات المركزية - كيان شباب بحري">
+  <title>منظومة العضويات | كيان شباب بحري</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/bahary-logo.jpg" alt="شعار كيان شباب بحري">
+    <div><strong>كيان شباب بحري</strong><span>القوة بالشباب</span></div>
+  </div>
+  <div class="top-actions"><span class="secure"><i></i> بوابة العضويات</span><button class="ghost" id="homeBtn">الرئيسية</button></div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <p class="eyebrow">منظومة العضويات المركزية</p>
+      <h1>القوة بالشباب،<br><em>والتنظيم يصنع الأثر.</em></h1>
+      <p>بوابة موحدة لتسجيل الأعضاء الحاليين والجدد، والوصول إلى مسارات المحافظات والوحدات المركزية.</p>
+      <div class="hero-actions">
+        <button class="primary" data-go="new">تسجيل عضو جديد <b>←</b></button>
+        <button class="secondary" data-go="current">تحديث بيانات عضو حالي <b>←</b></button>
+      </div>
+    </div>
+    <div class="hero-mark"><div class="ring"><img src="assets/bahary-logo.jpg" alt=""></div><span>BAHARY YOUTH</span><small>MEMBERSHIP PORTAL</small></div>
+  </section>
+
+  <section class="view active" id="view-home">
+    <div class="section-heading"><div><p class="eyebrow">ابدأ من هنا</p><h2>اختر نوع الخدمة</h2></div><span class="hint">خطوتان للوصول إلى النموذج المناسب</span></div>
+    <div class="choice-grid">
+      <button class="choice-card" data-go="new"><span class="choice-icon">＋</span><span><b>عضو جديد</b><small>طلب انضمام وتسجيل بيانات العضوية لأول مرة</small></span><strong>←</strong></button>
+      <button class="choice-card" data-go="current"><span class="choice-icon">↻</span><span><b>عضو حالي</b><small>تحديث البيانات المسجلة مسبقًا</small></span><strong>←</strong></button>
+    </div>
+    <div class="notice"><b>تنبيه تنظيمي</b><span>يُرجى التأكد من صحة البيانات قبل إرسال النموذج. لا تشارك الرقم القومي أو بياناتك الشخصية مع أي شخص عبر رسائل غير رسمية.</span></div>
+  </section>
+
+  <section class="view" id="view-new">
+    <button class="back" data-go="home">→ العودة للرئيسية</button>
+    <div class="section-heading"><div><p class="eyebrow">مسار الانضمام</p><h2>تسجيل عضو جديد</h2></div><span class="step">01 / 02</span></div>
+    <p class="lead">اختر الجهة التنظيمية التي ترغب في الانضمام إليها.</p>
+    <div class="choice-grid compact">
+      <button class="choice-card" data-go="new-central"><span class="choice-icon">▦</span><span><b>الوحدات المركزية</b><small>تسجيل عضو ضمن إحدى الوحدات المركزية</small></span><strong>←</strong></button>
+      <button class="choice-card" data-go="new-governorates"><span class="choice-icon">⌖</span><span><b>المحافظات</b><small>اختيار المحافظة لاستكمال التسجيل</small></span><strong>←</strong></button>
+    </div>
+  </section>
+
+  <section class="view" id="view-current">
+    <button class="back" data-go="home">→ العودة للرئيسية</button>
+    <div class="section-heading"><div><p class="eyebrow">مسار تحديث البيانات</p><h2>عضو حالي</h2></div><span class="step">01 / 02</span></div>
+    <p class="lead">اختر الجهة المسجل بها ملف العضوية حاليًا.</p>
+    <div class="choice-grid compact">
+      <button class="choice-card" data-go="current-central"><span class="choice-icon">▦</span><span><b>الوحدات المركزية</b><small>تحديث بيانات عضو بإحدى الوحدات المركزية</small></span><strong>←</strong></button>
+      <button class="choice-card" data-go="current-governorates"><span class="choice-icon">⌖</span><span><b>المحافظات</b><small>اختيار المحافظة لاستكمال تحديث البيانات</small></span><strong>←</strong></button>
+    </div>
+  </section>
+
+  <section class="view" id="view-new-governorates">
+    <button class="back" data-go="new">→ رجوع</button>
+    <div class="section-heading"><div><p class="eyebrow">تسجيل عضو جديد</p><h2>اختر المحافظة</h2></div><span class="step">02 / 02</span></div>
+    <div class="governorate-grid" id="newGovGrid"></div>
+  </section>
+
+  <section class="view" id="view-current-governorates">
+    <button class="back" data-go="current">→ رجوع</button>
+    <div class="section-heading"><div><p class="eyebrow">تحديث بيانات عضو حالي</p><h2>اختر المحافظة</h2></div><span class="step">02 / 02</span></div>
+    <div class="governorate-grid" id="currentGovGrid"></div>
+  </section>
+
+  <section class="view" id="view-new-central">
+    <button class="back" data-go="new">→ رجوع</button>
+    <div class="section-heading"><div><p class="eyebrow">تسجيل عضو جديد</p><h2>الوحدات المركزية</h2></div></div>
+    <div class="form-destination"><span class="large-icon">▦</span><h3>التسجيل بالوحدات المركزية</h3><p>اكتب اسم الوحدة والصفة التنظيمية داخل نموذج التسجيل.</p><button class="primary" id="newCentralLink">فتح نموذج العضو الجديد ↗</button></div>
+  </section>
+
+  <section class="view" id="view-current-central">
+    <button class="back" data-go="current">→ رجوع</button>
+    <div class="section-heading"><div><p class="eyebrow">تحديث بيانات عضو حالي</p><h2>الوحدات المركزية</h2></div></div>
+    <div class="form-destination"><span class="large-icon">▦</span><h3>تحديث بيانات الوحدات المركزية</h3><p>أدخل بياناتك الحالية والبيانات المطلوب تحديثها داخل النموذج.</p><button class="primary" id="currentCentralLink">فتح نموذج العضو الحالي ↗</button></div>
+  </section>
+
+  <section class="view" id="view-dashboard">
+    <button class="back" data-go="home">→ العودة للرئيسية</button>
+    <div class="section-heading"><div><p class="eyebrow">إدارة ومتابعة</p><h2>لوحة التحكم المركزية</h2></div><span class="badge">معاينة التصميم</span></div>
+    <div class="notice warning"><b>هذه معاينة فقط</b><span>الأرقام غير متصلة حاليًا بردود Microsoft Forms. يلزم إعداد مصدر بيانات آمن وتسجيل دخول قبل تشغيل لوحة التحكم الفعلية.</span></div>
+    <div class="stats">
+      <article><small>إجمالي الأعضاء</small><strong>—</strong><span>بانتظار ربط قاعدة البيانات</span></article>
+      <article><small>أعضاء جدد</small><strong>—</strong><span>بانتظار ربط قاعدة البيانات</span></article>
+      <article><small>تحديثات الأعضاء</small><strong>—</strong><span>بانتظار ربط قاعدة البيانات</span></article>
+      <article><small>المحافظات</small><strong>13</strong><span>نطاقات المتابعة المعتمدة</span></article>
+    </div>
+    <div class="panel"><h3>المحافظات المشمولة</h3><div id="dashboardGovs" class="mini-govs"></div></div>
+    <p class="privacy-note">لن يتم عرض الرقم القومي في لوحة الإحصائيات. يجب أن تتم مطابقة الهوية ومعالجة الرقم القومي داخل مصدر بيانات محمي، وليس في ملفات الموقع العامة.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logos"><img src="assets/bahary-logo.jpg" alt=""><img src="assets/ministry-logo.jpg" alt="شعار وزارة الشباب والرياضة"></div>
+  <div><strong>كيان شباب بحري</strong><span>القوة بالشباب</span></div>
+  <small>منظومة العضويات المركزية · نسخة تأسيسية</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
